@@ -25,10 +25,8 @@ public class SchoolProxy implements ConnectionInterface{
     private Set<Integer> teacherIDs;
      private  boolean authorized;
 
-    public SchoolProxy(Set<String> denyListedHosts,URL redirectPage,Set<Integer> teacherIDs,boolean authorized) {
-        this.denyListedHosts = denyListedHosts;
-        this.redirectPage = redirectPage;
-        this.teacherIDs = teacherIDs;
+    public SchoolProxy(boolean authorized) {
+        NetworkConnection networkConnection = new NetworkConnection();
         this.authorized = false;
     }
 
