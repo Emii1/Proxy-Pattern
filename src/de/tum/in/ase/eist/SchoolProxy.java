@@ -20,13 +20,18 @@ public class SchoolProxy implements ConnectionInterface{
 
     public void logout(){}
 
-    private Set<String> denyListedHosts;
-    private URL redirectPage;
+    private  Set<String> denyListedHosts;
+     private URL redirectPage;
     private Set<Integer> teacherIDs;
-    private boolean authorized;
+     private  boolean authorized;
 
-    public SchoolProxy() {
+    public SchoolProxy(Set<String> denyListedHosts,URL redirectPage,Set<Integer> teacherIDs,boolean authorized) {
+        this.denyListedHosts = denyListedHosts;
+        this.redirectPage = redirectPage;
+        this.teacherIDs = teacherIDs;
+        this.authorized = false;
     }
-// TODO: Implement the SchoolProxy
+
+    // TODO: Implement the SchoolProxy
 
 }
