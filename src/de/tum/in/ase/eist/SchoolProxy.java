@@ -20,9 +20,7 @@ public class SchoolProxy implements ConnectionInterface{
 
     }
 
-    public boolean isConnected() {
-        return false;
-    }
+
 
     public void login(int teacherID) {}
 
@@ -39,10 +37,11 @@ public class SchoolProxy implements ConnectionInterface{
         this.redirectPage = redirectPage;
         this.denylistedHosts = denylistedHosts;
     }
+  @Override
+    public boolean isConnected() {
+         return networkConnection.isConnected();
 
-    void NetworkConnection() {
-         networkConnection.isConnected();
-    }
+  }
     // TODO: Implement the SchoolProxy
 
 }
