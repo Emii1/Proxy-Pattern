@@ -6,6 +6,13 @@ import java.util.Set;
 
 public class SchoolProxy implements ConnectionInterface{
 
+
+    private Set<String> denylistedHosts ;
+    private URL redirectPage;
+    private Set<Integer> teacherIDs;
+    private boolean authorized;
+    private NetworkConnection networkConnection;
+
     public void connect(URL url) {
 
     }
@@ -21,11 +28,7 @@ public class SchoolProxy implements ConnectionInterface{
 
     public void logout() {}
 
-    private Set<String> denylistedHosts ;
-     private URL redirectPage;
-    private Set<Integer> teacherIDs;
-     private boolean authorized;
-     private NetworkConnection networkConnection;
+
 
 
     public SchoolProxy(Set<String> denylistedHosts, URL redirectPage, Set<Integer> teacherIDs) {
@@ -37,6 +40,9 @@ public class SchoolProxy implements ConnectionInterface{
         this.denylistedHosts = denylistedHosts;
     }
 
+    void NetworkConnection() {
+         networkConnection.isConnected();
+    }
     // TODO: Implement the SchoolProxy
 
 }
