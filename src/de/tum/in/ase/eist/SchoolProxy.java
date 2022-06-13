@@ -21,11 +21,11 @@ public class SchoolProxy implements ConnectionInterface{
 
     public void logout() {}
 
-    public  Set<String> denylistedHosts;
+    private Set<String> denylistedHosts ;
      public URL redirectPage;
     public Set<Integer> teacherIDs;
      public boolean authorized;
-     public NetworkConnection networkConnection;
+     private NetworkConnection networkConnection;
 
 
     public SchoolProxy(Set<String> denylistedHosts, URL redirectPage, Set<Integer> teacherIDs) {
