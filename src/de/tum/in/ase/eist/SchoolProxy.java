@@ -34,9 +34,7 @@ public class SchoolProxy implements ConnectionInterface{
     }
   @Override
     public boolean isConnected() {
-         return networkConnection.isConnected();
-
-  }
+         return networkConnection.isConnected(); }
 
 
     public void disconnect(){
