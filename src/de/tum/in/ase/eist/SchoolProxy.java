@@ -21,11 +21,12 @@ public class SchoolProxy implements ConnectionInterface{
 
     public void logout() {}
 
-    public  Set<String> denyListedHosts;
+    public  Set<String> denylistedHosts;
      public URL redirectPage;
     public Set<Integer> teacherIDs;
      public boolean authorized;
      public NetworkConnection networkConnection;
+
 
     public SchoolProxy(Set<String> denylistedHosts, URL redirectPage, Set<Integer> teacherIDs) {
         this.networkConnection = new NetworkConnection();
@@ -33,7 +34,7 @@ public class SchoolProxy implements ConnectionInterface{
 
         this.teacherIDs = teacherIDs;
         this.redirectPage = redirectPage;
-        this.denyListedHosts = denylistedHosts;
+        this.denylistedHosts = denylistedHosts;
     }
 
     // TODO: Implement the SchoolProxy
