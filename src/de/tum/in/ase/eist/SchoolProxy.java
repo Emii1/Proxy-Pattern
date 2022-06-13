@@ -22,9 +22,9 @@ public class SchoolProxy implements ConnectionInterface{
     public void logout() {}
 
     private Set<String> denylistedHosts ;
-     public URL redirectPage;
-    public Set<Integer> teacherIDs;
-     public boolean authorized;
+     private URL redirectPage;
+    private Set<Integer> teacherIDs;
+     private boolean authorized;
      private NetworkConnection networkConnection;
 
 
