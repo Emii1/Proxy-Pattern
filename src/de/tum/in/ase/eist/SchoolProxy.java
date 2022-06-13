@@ -13,12 +13,7 @@ public class SchoolProxy implements ConnectionInterface{
     private boolean authorized;
     private NetworkConnection networkConnection;
 
-    public void connect(URL url) {
 
-    }
-    public void disconnect() {
-
-    }
 
 
 
@@ -42,6 +37,14 @@ public class SchoolProxy implements ConnectionInterface{
          return networkConnection.isConnected();
 
   }
+
+
+    public void disconnect(){
+        networkConnection.disconnect();
+    }
+    public void connect(URL url){
+        networkConnection.connect( redirectPage);
+    }
     // TODO: Implement the SchoolProxy
 
 }
