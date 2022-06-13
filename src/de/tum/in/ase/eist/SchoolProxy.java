@@ -1,6 +1,7 @@
 package de.tum.in.ase.eist;
 
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -41,7 +42,7 @@ public class SchoolProxy implements ConnectionInterface{
         networkConnection.disconnect();
     }
     public void connect(URL url){
-        networkConnection.connect( redirectPage);
+        networkConnection.connect(url);
     }
     // TODO: Implement the SchoolProxy
 
