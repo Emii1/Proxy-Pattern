@@ -16,14 +16,14 @@ public class SchoolProxy implements ConnectionInterface{
         return false;
     }
 
-    public void login(int teacherID){}
+    public void login(int teacherID) {}
 
-    public void logout(){}
+    public void logout() {}
 
-    private  Set<String> denyListedHosts;
-     private URL redirectPage;
-    private Set<Integer> teacherIDs;
-     private  boolean authorized;
+    public  Set<String> denyListedHosts;
+     public URL redirectPage;
+    public Set<Integer> teacherIDs;
+     public  boolean authorized;
 
     public SchoolProxy(boolean authorized) {
         NetworkConnection networkConnection = new NetworkConnection();
