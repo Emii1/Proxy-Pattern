@@ -21,7 +21,7 @@ public class SchoolProxy implements ConnectionInterface{
 
     public void login(int teacherID) {}
 
-    public void logout() {}
+    public void logout() { authorized = false; }
 
 
 
