@@ -2,6 +2,7 @@ package de.tum.in.ase.eist;
 
 import java.net.URL;
 import java.net.URLConnection;
+import java.sql.SQLOutput;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -42,8 +43,13 @@ public class SchoolProxy implements ConnectionInterface{
         networkConnection.disconnect();
     }
     public void connect(URL url){
-        networkConnection.connect(url);
+        if (denylistedHosts.contains(url.getHost())) System.out.println(redirectPage);
+          System.err.println("Connection to" + url + "was rejected");
+           networkConnection.connect(url);
+
     }
+
+
     // TODO: Implement the SchoolProxy
 
 }
