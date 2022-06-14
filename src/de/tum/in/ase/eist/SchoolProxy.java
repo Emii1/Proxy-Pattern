@@ -19,11 +19,13 @@ public class SchoolProxy implements ConnectionInterface {
 
 
     public void login(int teacherID) {
-        if (teacherIDs.contains(teacherID)) { networkConnection.connect(redirectPage); return;  }
+        if (teacherIDs.contains(teacherID)) { networkConnection.connect(redirectPage); return; }
         authorized = true;
     }
 
-
+    public void setAuthorized(boolean authorized) {
+        this.authorized = authorized;
+    }
 
     public void logout() { authorized = false; }
 
@@ -39,6 +41,9 @@ public class SchoolProxy implements ConnectionInterface {
         this.denylistedHosts = denylistedHosts;
     }
 
+    public boolean isAuthorized() {
+        return authorized;
+    }
 
     @Override
     public boolean isConnected() {
