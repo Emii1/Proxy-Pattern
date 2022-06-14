@@ -22,6 +22,10 @@ public class SchoolProxy implements ConnectionInterface{
         authorized = true;
     }
 
+    public void setAuthorized(boolean authorized) {
+        this.authorized = authorized;
+    }
+
     public void logout() { authorized = false; }
 
 
@@ -35,7 +39,12 @@ public class SchoolProxy implements ConnectionInterface{
         this.redirectPage = redirectPage;
         this.denylistedHosts = denylistedHosts;
     }
-  @Override
+
+    public boolean isAuthorized() {
+        return authorized;
+    }
+
+    @Override
     public boolean isConnected() {
          return networkConnection.isConnected(); }
 
